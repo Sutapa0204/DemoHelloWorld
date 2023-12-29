@@ -23,6 +23,11 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'dock2'
-    repository: 'sutapa0204 / sutaparoydemorepo'
+    command: 'login'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'dock2'
+    repository: 'v'
     command: 'buildAndPush'
     Dockerfile: '**/AzureDockerfile'
+    
